@@ -37,7 +37,7 @@ git push origin main
 ## Resources
 - [Git and GitHub](https://www.youtube.com/watch?v=SWYqp7iY_Tc)
 - [Go](https://golang.org/doc/)
-- [Go by Example](https://gobyexample.com/)\
+- [Go by Example](https://gobyexample.com/)
 
 
 ### Sincerly,
