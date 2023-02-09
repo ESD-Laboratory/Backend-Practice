@@ -10,6 +10,13 @@ Follow the steps below to setup the project on your local machine.
 ## Assignments
 All assignments will be pushed into the Assignments folder, each with its own subfolder. Follow the instructions in each assignment folder
 
+## How to Run the Code
+After you have completed the assignment, you can run the code by using the following command
+```
+cd Assignments/<assignment-name>
+go test -v
+```
+
 ## Submission
 
 - Before you do the assignment first you need to create a new branch with your name and the assignment name e.g. `git checkout -b <your-name>/<assignment-name>`
