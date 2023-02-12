@@ -228,14 +228,14 @@ func main() {
 
     /* book 1 specification */
     Book1.title = "Go Programming"
-    Book1.author = "Mahesh Kumar"
+    Book1.author = "ESD Laboratory"
     Book1.subject = "Go Programming Tutorial"
     Book1.book_id = 6495407
 
     /* book 2 specification */
-    Book2.title = "Telecom Billing"
-    Book2.author = "Zara Ali"
-    Book2.subject = "Telecom Billing Tutorial"
+    Book2.title = "UI/UX in Practice Vol1"
+    Book2.author = "ESD Laboratory"
+    Book2.subject = "UI/UX"
     Book2.book_id = 6495700
 
     /* print Book1 info */
