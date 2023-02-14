@@ -24,6 +24,11 @@ Output: -1
 
 func DivideWhole(a int, b int) int {
 	// TODO: Your code here
-	return 0
+	var result int
+	if b == 0 {
+		result = -1
+	}else{
+		result = a/b
+	}
+	return result
 }
-
