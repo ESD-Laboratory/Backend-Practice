@@ -1,5 +1,9 @@
 package Assignment1
 
+import (
+	"regexp"
+)
+
 /*
 Clean up sentences. [WEIGHT = 1]
 
@@ -32,6 +36,10 @@ Explanation: Replace the : and , and then remove all trailing/leading spaces
 
 func CleanUp(s string) string {
 	// TODO: Your code here
-	return ""
-}
+	var special *regexp.Regexp = regexp.MustCompile(`[^\w\s]+`)
+	s = special.ReplaceAllString(s, "")
+	// var space *regexp.Regexp = regexp.MustCompile(`[\t\n\f\r]`)
+	// s = space.ReplaceAllString(s, " ")
 
+	return s
+}
