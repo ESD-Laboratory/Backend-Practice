@@ -21,6 +21,14 @@ Explanation: All numbers are odd, so return 0
 
 func EvenSum(nums []int) int {
 	// TODO: Your code here
-	return 0
+	total := 0
+
+	for i := 0; i < len(nums); i++ {
+		if nums[i] % 2 == 0{
+			total+=nums[i]
+		}
+	}
+
+	return total
 }
 
