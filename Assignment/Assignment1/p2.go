@@ -1,5 +1,7 @@
 package Assignment1
 
+import "strings"
+
 /*
 Clean up sentences. [WEIGHT = 1]
 
@@ -31,7 +33,13 @@ Explanation: Replace the : and , and then remove all trailing/leading spaces
 */
 
 func CleanUp(s string) string {
-	// TODO: Your code here
-	return ""
+	var result string
+	for _, char := range s {
+		if (char >= 'a' && char <= 'z') || (char >= 'A' && char <= 'Z') || (char >= '0' && char <= '9') || char == ' ' {
+			result += string(char)
+		} else {
+			result += " "
+		}
+	}
+	return strings.TrimSpace(strings.Join(strings.Fields(result), " "))
 }
-
