@@ -23,7 +23,10 @@ Output: -1
 */
 
 func DivideWhole(a int, b int) int {
-	// TODO: Your code here
-	return 0
-}
 
+	if b == 0 {
+		return -1
+	} else {
+		return a / b
+	}
+}

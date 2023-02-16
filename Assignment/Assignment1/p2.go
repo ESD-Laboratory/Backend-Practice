@@ -1,5 +1,11 @@
 package Assignment1
 
+import (
+	"regexp"
+	"strings"
+	"unicode"
+)
+
 /*
 Clean up sentences. [WEIGHT = 1]
 
@@ -31,7 +37,16 @@ Explanation: Replace the : and , and then remove all trailing/leading spaces
 */
 
 func CleanUp(s string) string {
-	// TODO: Your code here
-	return ""
+	req := ""
+	whitespace := regexp.MustCompile(`\s+`)
+	for _, loop := range s {
+		if unicode.IsLetter(loop) || unicode.IsNumber(loop) || unicode.IsSpace(loop) {
+			req += string(loop)
+		}
+	}
+	//clean use strings.TrimSpace
+	Trimmed := strings.TrimSpace(req)
+	//clean doubled whitespace using Regexp
+	regexped := whitespace.ReplaceAllString(Trimmed, " ")
+	return regexped
 }
-
