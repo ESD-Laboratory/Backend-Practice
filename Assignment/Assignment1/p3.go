@@ -20,7 +20,14 @@ Explanation: All numbers are odd, so return 0
 */
 
 func EvenSum(nums []int) int {
-	// TODO: Your code here
-	return 0
-}
+	value := 0
+	for _, loop := range nums {
+		if loop%2 == 0 {
+			value += loop
+		} else {
+			value += 0
+		}
 
+	}
+	return value
+}
