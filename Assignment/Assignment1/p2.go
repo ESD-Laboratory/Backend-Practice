@@ -1,5 +1,10 @@
 package Assignment1
 
+import (
+	"strings"
+	"unicode"
+)
+
 /*
 Clean up sentences. [WEIGHT = 1]
 
@@ -32,6 +37,26 @@ Explanation: Replace the : and , and then remove all trailing/leading spaces
 
 func CleanUp(s string) string {
 	// TODO: Your code here
-	return ""
-}
+	var cleanedStr strings.Builder
+	prevCharWasSpace := false
+	for _, r := range s {
+		if unicode.IsLetter(r) || unicode.IsNumber(r) || r == ' ' {
+			if r == ' ' {
+				if !prevCharWasSpace {
+					cleanedStr.WriteRune(r)
+				}
+				prevCharWasSpace = true
+			} else {
+				cleanedStr.WriteRune(r)
+				prevCharWasSpace = false
+			}
+		} else {
+			if !prevCharWasSpace {
+				cleanedStr.WriteRune(' ')
+			}
+			prevCharWasSpace = true
+		}
+	}
 
+	return strings.TrimSpace(cleanedStr.String())
+}

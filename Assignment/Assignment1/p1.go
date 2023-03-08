@@ -24,6 +24,9 @@ Output: -1
 
 func DivideWhole(a int, b int) int {
 	// TODO: Your code here
-	return 0
+	if b != 0 {
+		return a / b
+	} else {
+		return -1
+	}
 }
-
